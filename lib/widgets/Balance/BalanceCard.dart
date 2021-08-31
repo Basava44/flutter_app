@@ -8,13 +8,13 @@ class BalanceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+      margin: EdgeInsets.fromLTRB(10, 15, 10, 5),
       child: Card(
         color: Colors.white,
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(5, 15, 50, 5),
+            padding: const EdgeInsets.fromLTRB(5, 10, 50, 5),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'Balance/BalanceCard.dart';
 import 'Balance/BalanceData.dart';
+import 'Recomended.dart';
 
 class Balance extends StatelessWidget {
 
@@ -13,9 +14,14 @@ class Balance extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-     child: Row(
-       children:data.map((e) => BalanceCard(data: e)).toList(),
+     child: Column(
+       children:[ Row(
+         children:data.map((e) => BalanceCard(data: e)).toList(),
+       ),
+        Recomended(),
+       ],
      ),
+  
       color: Colors.blue[50],
     );
   }
