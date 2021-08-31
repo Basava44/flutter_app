@@ -17,11 +17,13 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
+        elevation: 0,
         backgroundColor: Colors.white,
         leading: IconButton(
           icon: Icon(Icons.menu_open_outlined),
-          iconSize: 30,
+          iconSize: 35,
           onPressed: () {},
           color: Colors.black,
         ), 
@@ -38,13 +40,14 @@ class _MyAppState extends State<MyApp> {
                 });
               },
               icon: Icon(Icons.notifications_none_outlined),
-              iconSize: 32,
+              iconSize: 35,
               color: Colors.black,
             ),
           ),
           SizedBox(width: 10),
           CircleAvatar(
             backgroundImage: AssetImage('assets/images/avatar.png'),
+            radius: 30,
           ),
           SizedBox(
             width: 20.0,
