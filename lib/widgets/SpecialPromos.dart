@@ -13,7 +13,7 @@ class SpecialPromos extends StatelessWidget {
             style: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold,
-              color: Colors.purple.shade900,
+              color: Colors.purple,
             ),
             ),
             SizedBox(height: 12,),
@@ -48,7 +48,7 @@ class SpecialPromos extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                   ),
                   ),
-                  SizedBox(height: 2,),
+                  SizedBox(height: 4,),
                 Text(
                   'Promo that’s all you! ',
                   style: TextStyle(

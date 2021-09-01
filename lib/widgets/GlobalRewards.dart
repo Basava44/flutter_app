@@ -8,20 +8,35 @@ class GlobalRewards extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Text(
-            'Global Rewards',
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              color: Colors.purple.shade900,
-            ),
-            ),
+          ShaderMask(
+            shaderCallback: (bounds) => 
+            LinearGradient(
+              colors: [
+                Color(0xff3023ae),
+                Color(0xffc86dd7),
+              ],
+              tileMode: TileMode.mirror,
+            ).createShader(bounds),
+            child: Text(
+              'Global Rewards',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+              ),
+          ),
             SizedBox(height: 12,),
             Card(
               elevation: 0,
               child: Container(
                 decoration: BoxDecoration(
-                  color: Color(0xfff9ae34),
+                  gradient: LinearGradient(
+                    colors:[
+                      Color(0xfff9ae34),
+                      Color(0xffff8720),
+                    ]
+                  ),
                   borderRadius: BorderRadius.all(Radius.circular(10)),
                 ),
                 padding: EdgeInsets.all(20),

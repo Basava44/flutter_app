@@ -74,10 +74,29 @@ class _MyAppState extends State<MyApp> {
               GlobalRewards(),
               Brands(),
               Button(),
+              _some(),
             ],
           ),
         ),
       ),
     );
   }
+}
+
+Widget _some() {
+  return ShaderMask(
+    shaderCallback: (bounds) => 
+      LinearGradient(
+        colors: [
+          Colors.red,
+          Colors.yellow,
+          Colors.pink,
+        ],
+        tileMode: TileMode.mirror,
+        ).createShader(bounds),
+        child: Text('Karibasaveshwara',
+        style: TextStyle(fontSize: 30,
+        color: Colors.white),
+        ),
+    );
 }

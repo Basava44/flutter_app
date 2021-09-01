@@ -8,14 +8,25 @@ class RoamingPlans extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Text(
-            'Roaming Plans',
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              color: Colors.purple.shade900,
-            ),
-            ),
+          ShaderMask(
+            shaderCallback: (bounds) => 
+            LinearGradient(
+              colors: [
+                Color(0xff3023ae),
+                Color(0xffc86dd7),
+                Colors.red,
+              ],
+              tileMode: TileMode.mirror,
+            ).createShader(bounds),
+            child: Text(
+              'Roaming Plans',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+              ),
+          ),
             SizedBox(height: 12,),
           Card(
             elevation: 0,
@@ -40,15 +51,25 @@ class RoamingPlans extends StatelessWidget {
                   ),
                   ),
                   SizedBox(height: 12,),
-                Text(
-                  'Planing for a foreign trip?',
-                  style: TextStyle(
-                    color: Colors.pink.shade100,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  ),
-                  SizedBox(height: 2,),
+                ShaderMask(
+                  shaderCallback: (bounds) => 
+                  LinearGradient(
+                    colors: [
+                      Color(0xffc8b9ff),
+                      Color(0xffffffff),
+                    ],
+                    tileMode: TileMode.repeated,
+                  ).createShader(bounds),
+                  child: Text(
+                    'Planing for a foreign trip?',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    ),
+                ),
+                  SizedBox(height: 4,),
                 Text(
                   'Roam worry free!',
                   style: TextStyle(
