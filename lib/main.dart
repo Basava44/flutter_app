@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart';
+import 'package:flutter_app/widgets/Brands.dart';
 import 'package:flutter_app/widgets/ElevatedButton.dart';
 import 'package:flutter_app/widgets/GlobalRewards.dart';
 import 'package:flutter_app/widgets/LatestPromos.dart';
@@ -71,6 +72,7 @@ class _MyAppState extends State<MyApp> {
               LatestPromos(),
               RoamingPlans(),
               GlobalRewards(),
+              Brands(),
               Button(),
             ],
           ),
