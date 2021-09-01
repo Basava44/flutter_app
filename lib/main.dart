@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart';
+import 'package:flutter_app/widgets/GlobalRewards.dart';
 import 'package:flutter_app/widgets/RoamingPalns.dart';
 import 'package:flutter_app/widgets/SpecialPromos.dart';
 import 'widgets/UserData.dart';
@@ -66,6 +67,7 @@ class _MyAppState extends State<MyApp> {
               Balance(),
               SpecialPromos(),
               RoamingPlans(),
+              GlobalRewards(),
             ],
           ),
         ),
