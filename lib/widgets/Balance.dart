@@ -15,6 +15,13 @@ class Balance extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        color: Color(0xFFF1F4FF),
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(20),
+          topLeft: Radius.circular(20),
+        ),
+      ),
      child: Column(
        children:[ Row(
          children:data.map((e) => BalanceCard(data: e)).toList(),
@@ -22,7 +29,6 @@ class Balance extends StatelessWidget {
        Recomended(),
        ],
      ),
-      color: Colors.blue[50],
     );
   }
 }

@@ -20,8 +20,11 @@ class GlobalRewards extends StatelessWidget {
             Card(
               elevation: 0,
               child: Container(
+                decoration: BoxDecoration(
+                  color: Color(0xfff9ae34),
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                ),
                 padding: EdgeInsets.all(20),
-                color: Colors.orange.shade300,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
@@ -29,19 +32,22 @@ class GlobalRewards extends StatelessWidget {
                       'YOUR REWARD POINTS',
                       style: TextStyle(
                         fontSize: 11,
-                        fontWeight: FontWeight.bold,
+                        fontWeight: FontWeight.w600,
                         color: Colors.white,
                       ),
                       ),
-                      SizedBox(height: 4,),
-                    Text(
-                      '7250 Pts',
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
-                      ),
+                      SizedBox(height: 6,),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
+                      child: Text(
+                        '7250 Pts',
+                        style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
+                        ),
+                    ),
                   ],
                 ),
                 ),
