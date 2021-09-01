@@ -19,7 +19,7 @@ class BalanceCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 CircleAvatar(
-                  child: Text(data.icon),
+                  backgroundImage: AssetImage(data.icon),
                   radius: 16,
                   backgroundColor: Colors.grey[200],
                 ),
