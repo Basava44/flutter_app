@@ -10,7 +10,7 @@ class RecomendCards extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Card(
-        color: Colors.blue,
+        color: Colors.blue[900],
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(

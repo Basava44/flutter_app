@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart';
+import 'package:flutter_app/widgets/RoamingPalns.dart';
+import 'package:flutter_app/widgets/SpecialPromos.dart';
 import 'widgets/UserData.dart';
 import 'widgets/Balance.dart';
 
@@ -58,10 +60,12 @@ class _MyAppState extends State<MyApp> {
           ],
         ),
         body: SafeArea(
-          child: Column(
+          child: ListView(
             children: <Widget>[
               UserData(),
               Balance(),
+              SpecialPromos(),
+              RoamingPlans(),
             ],
           ),
         ),
