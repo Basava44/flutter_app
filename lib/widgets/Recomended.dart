@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/widgets/RecomendCard/RecomendCards.dart';
+import 'package:flutter_app/widgets/RecomendCard/RecomendData.dart';
 
+// ignore: must_be_immutable
 class Recomended extends StatelessWidget {
-  const Recomended({ Key? key }) : super(key: key);
+  List<RecomendData> data = [
+    RecomendData(title: 'GoUNLI350', data: '30 days UNLI to Globe'),
+    RecomendData(title: 'GoUNLI180', data: '15 days UNLI to Globe'),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding:EdgeInsets.all(15),
+      padding: EdgeInsets.all(15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -20,9 +26,9 @@ class Recomended extends StatelessWidget {
                   fontSize: 12,
                   fontWeight: FontWeight.w600,
                 ),
-                ),
+              ),
               TextButton(
-                onPressed: (){}, 
+                onPressed: () {},
                 child: Text(
                   'View All',
                   style: TextStyle(
@@ -34,9 +40,11 @@ class Recomended extends StatelessWidget {
               )
             ],
           ),
+          Row(
+            children:data.map((e) => RecomendCards(data: e)).toList(),
+          )
         ],
       ),
-      
     );
   }
 }

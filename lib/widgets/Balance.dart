@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/widgets/Recomended.dart';
 import 'Balance/BalanceCard.dart';
 import 'Balance/BalanceData.dart';
-import 'Recomended.dart';
 
+// ignore: must_be_immutable
 class Balance extends StatelessWidget {
 
   List<BalanceData> data = [
@@ -18,7 +19,7 @@ class Balance extends StatelessWidget {
        children:[ Row(
          children:data.map((e) => BalanceCard(data: e)).toList(),
        ),
-        Recomended(),
+       Recomended(),
        ],
      ),
   

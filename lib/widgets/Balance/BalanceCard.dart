@@ -8,7 +8,7 @@ class BalanceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.fromLTRB(10, 15, 10, 5),
+      margin: EdgeInsets.fromLTRB(10, 15, 0, 5),
       child: Card(
         color: Colors.white,
         child: Padding(
