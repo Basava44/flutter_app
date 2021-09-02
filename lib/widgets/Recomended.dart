@@ -41,16 +41,9 @@ class Recomended extends StatelessWidget {
               )
             ],
           ),
-          ListView.builder(
-            itemCount: data.length,
-            scrollDirection: Axis.horizontal,
-            itemBuilder: ( c,_index){
-              return RecomendCards(data: data[_index]);
-            }
-            )
-          // Row(
-          //   children:data.map((e) => RecomendCards(data: e)).toList(),
-          // )
+          Row(
+            children:data.map((e) => RecomendCards(data: e)).toList(),
+          )
         ],
       ),
     );

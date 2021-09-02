@@ -68,7 +68,7 @@ class _MyAppState extends State<MyApp> {
           child: ListView(
             children: <Widget>[
                UserData(),
-               //Balance(),
+               Balance(),
                SpecialPromos(),
                LatestPromos(),
                RoamingPlans(),
