@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/theme/AppTheme.dart';
 
 class SpecialPromos extends StatelessWidget {
   @override
@@ -12,8 +13,8 @@ class SpecialPromos extends StatelessWidget {
             shaderCallback: (bounds) => 
             LinearGradient(
               colors: [
-                Color(0xFF3023AE),
-                Color(0xFFC86DD7),
+                AppTheme.colors.sapphire,
+                AppTheme.colors.lavender_pink,
               ],
               tileMode: TileMode.clamp,
             ).createShader(bounds),
@@ -22,7 +23,7 @@ class SpecialPromos extends StatelessWidget {
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: AppTheme.colors.white,
               ),
               ),
           ),
@@ -45,7 +46,7 @@ class SpecialPromos extends StatelessWidget {
                 Text(
                   'GoSakto',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: AppTheme.colors.white,
                     fontSize: 14,
                   ),
                   ),
@@ -54,7 +55,7 @@ class SpecialPromos extends StatelessWidget {
                   shaderCallback: (bounds) => 
                   LinearGradient(
                     colors: [
-                      Color(0xFFFFFFFF),
+                      AppTheme.colors.white,
                       Color(0xFFFFB2C6),
                     ],
                     tileMode: TileMode.clamp,
@@ -62,7 +63,7 @@ class SpecialPromos extends StatelessWidget {
                   child: Text(
                     'Create What Matters',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: AppTheme.colors.white,
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
@@ -72,30 +73,30 @@ class SpecialPromos extends StatelessWidget {
                 Text(
                   'Promo that’s all you! ',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: AppTheme.colors.white,
                     fontSize: 12,
                   ),
                   ),
                   SizedBox(height: 20,),
                 Container(
                   padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
-                  decoration: BoxDecoration(
-                    color: Colors.black45,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
+                  // decoration: BoxDecoration(
+                  //   color: Colors.black45,
+                  //   borderRadius: BorderRadius.circular(10),
+                  // ),
                   child: Row(
                   children: [
                     Text(
                         'Create your own Promo',
                         style: TextStyle(
-                        color: Colors.white,
+                        color: AppTheme.colors.white,
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
                         ),
                       ),
                     Icon(
                         Icons.arrow_right_outlined,
-                        color: Colors.white,
+                        color: AppTheme.colors.white,
                     ),
                   ],
                 ),

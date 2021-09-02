@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/theme/AppTheme.dart';
 import 'package:flutter_app/widgets/Recomended.dart';
 import 'Balance/BalanceCard.dart';
 import 'Balance/BalanceData.dart';
@@ -16,7 +17,7 @@ class Balance extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Color(0xFFF1F4FF),
+        color: AppTheme.colors.ice_blue,
         borderRadius: BorderRadius.only(
           topRight: Radius.circular(20),
           topLeft: Radius.circular(20),

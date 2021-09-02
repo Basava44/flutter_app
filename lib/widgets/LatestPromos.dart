@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/theme/AppTheme.dart';
 import 'package:flutter_app/widgets/LatestPromos/LatestPromoCard.dart';
 import 'package:flutter_app/widgets/LatestPromos/LatestPromoCardData.dart';
 
@@ -24,15 +25,15 @@ class LatestPromos extends StatelessWidget {
                 shaderCallback: (bounds) => 
                 LinearGradient(
                   colors: [
-                    Color(0xFF3023AE),
-                    Color(0xFFC86DD7),
+                    AppTheme.colors.sapphire,
+                    AppTheme.colors.lavender_pink,
                   ],
                   tileMode: TileMode.clamp,
                 ).createShader(bounds),
                 child: Text(
                   'Latest Promos',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: AppTheme.colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.w600,
                   ),
@@ -43,7 +44,7 @@ class LatestPromos extends StatelessWidget {
                 child: Text(
                   'View All',
                   style: TextStyle(
-                    color: Colors.blue,
+                    color: AppTheme.colors.lightish_blue,
                     fontWeight: FontWeight.bold,
                     fontSize: 13,
                   ),

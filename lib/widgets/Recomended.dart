@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/theme/AppTheme.dart';
 import 'package:flutter_app/widgets/RecomendCard/RecomendCards.dart';
 import 'package:flutter_app/widgets/RecomendCard/RecomendData.dart';
 
@@ -32,7 +33,7 @@ class Recomended extends StatelessWidget {
                 child: Text(
                   'View All',
                   style: TextStyle(
-                    color: Colors.blue,
+                    color: AppTheme.colors.lightish_blue,
                     fontWeight: FontWeight.bold,
                     fontSize: 12,
                   ),
@@ -40,9 +41,16 @@ class Recomended extends StatelessWidget {
               )
             ],
           ),
-          Row(
-            children:data.map((e) => RecomendCards(data: e)).toList(),
-          )
+          ListView.builder(
+            itemCount: data.length,
+            scrollDirection: Axis.horizontal,
+            itemBuilder: ( c,_index){
+              return RecomendCards(data: data[_index]);
+            }
+            )
+          // Row(
+          //   children:data.map((e) => RecomendCards(data: e)).toList(),
+          // )
         ],
       ),
     );

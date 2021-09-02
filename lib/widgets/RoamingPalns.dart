@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/theme/AppTheme.dart';
 
 class RoamingPlans extends StatelessWidget {
   @override
@@ -12,8 +13,8 @@ class RoamingPlans extends StatelessWidget {
             shaderCallback: (bounds) => 
             LinearGradient(
               colors: [
-                Color(0xFF3023AE),
-                Color(0xFFC86DD7),
+                AppTheme.colors.sapphire,
+                AppTheme.colors.lavender_pink,
               ],
               tileMode: TileMode.clamp,
             ).createShader(bounds),
@@ -22,7 +23,7 @@ class RoamingPlans extends StatelessWidget {
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: AppTheme.colors.white,
               ),
               ),
           ),
@@ -45,7 +46,7 @@ class RoamingPlans extends StatelessWidget {
                 Text(
                   'GoSakto',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: AppTheme.colors.white,
                     fontSize: 14,
                   ),
                   ),
@@ -62,7 +63,7 @@ class RoamingPlans extends StatelessWidget {
                   child: Text(
                     'Planing for a foreign trip?',
                     style: TextStyle(
-                      color: Colors.white,
+                      color: AppTheme.colors.white,
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                     ),
@@ -72,7 +73,7 @@ class RoamingPlans extends StatelessWidget {
                 Text(
                   'Roam worry free!',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: AppTheme.colors.white,
                     fontSize: 12,
                   ),
                   ),
@@ -88,14 +89,14 @@ class RoamingPlans extends StatelessWidget {
                     Text(
                         'Explore Roaming Packs',
                         style: TextStyle(
-                        color: Colors.white,
+                        color: AppTheme.colors.white,
                         fontSize: 14,
                         fontWeight: FontWeight.w600,
                         ),
                       ),
                     Icon(
                         Icons.arrow_right_outlined,
-                        color: Colors.white,
+                        color: AppTheme.colors.white,
                     ),
                   ],
                 ),

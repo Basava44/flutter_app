@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/theme/AppTheme.dart';
 import 'LatestPromoCardData.dart';
 
 class LatestPromoCard extends StatelessWidget {
@@ -35,7 +36,7 @@ class LatestPromoCard extends StatelessWidget {
                 Text(
                   data.title1,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: AppTheme.colors.white,
                     fontSize: 14,
                   ),
                 ),
@@ -45,7 +46,7 @@ class LatestPromoCard extends StatelessWidget {
                 Text(
                   data.title2,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: AppTheme.colors.white,
                     fontSize: 14,
                   ),
                 ),
@@ -55,7 +56,7 @@ class LatestPromoCard extends StatelessWidget {
                 Text(
                   data.amount,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: AppTheme.colors.white,
                     fontSize: 14,
                   ),
                 ),

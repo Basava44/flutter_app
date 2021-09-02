@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/theme/AppTheme.dart';
 import 'BalanceData.dart';
 
 class BalanceCard extends StatelessWidget {
   final BalanceData data;
   BalanceCard({ required this.data });
-
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.fromLTRB(10, 15, 0, 5),
       child: Card(
-        color: Colors.white,
+        color: AppTheme.colors.white,
         child: Padding(
           padding: const EdgeInsets.all(10),
           child: Padding(
@@ -21,7 +21,6 @@ class BalanceCard extends StatelessWidget {
                 CircleAvatar(
                   backgroundImage: AssetImage(data.icon),
                   radius: 16,
-                  backgroundColor: Colors.grey[200],
                 ),
                 SizedBox(
                   height: 25,
@@ -30,7 +29,7 @@ class BalanceCard extends StatelessWidget {
                   data.title,
                   style: TextStyle(
                     fontSize: 12,
-                    color: Colors.grey[600],
+                    color: AppTheme.colors.greyish_brown_two,
                   ),
                 ),
                 SizedBox(
@@ -40,7 +39,7 @@ class BalanceCard extends StatelessWidget {
                   data.balance,
                   style: TextStyle(
                     fontSize: 16,
-                    color: Colors.black,
+                    color: AppTheme.colors.dark_grey,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
@@ -51,7 +50,7 @@ class BalanceCard extends StatelessWidget {
                   data.validity,
                   style: TextStyle(
                     fontSize: 12,
-                    color: Colors.black54,
+                    color: AppTheme.colors.black_two,
                   ),
                 ),
               ],
@@ -62,4 +61,6 @@ class BalanceCard extends StatelessWidget {
       ),
     );
   }
+
+  noSuchMethod(Invocation invocation) => super.noSuchMethod(invocation);
 }

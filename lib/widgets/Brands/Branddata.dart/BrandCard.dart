@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/theme/AppTheme.dart';
 import 'BrandData.dart';
 
 class BrandCard extends StatelessWidget {
@@ -35,7 +36,7 @@ class BrandCard extends StatelessWidget {
                 Text(
                   data.title,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: AppTheme.colors.white,
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
                   ),
@@ -46,7 +47,7 @@ class BrandCard extends StatelessWidget {
                 Text(
                   data.footer1,
                   style: TextStyle(
-                    color: Colors.white60,
+                    color: AppTheme.colors.white,
                     fontSize: 15,
                     fontWeight: FontWeight.w500,
                   ),
@@ -57,7 +58,7 @@ class BrandCard extends StatelessWidget {
                 Text(
                   data.footer2,
                   style: TextStyle(
-                    color: Colors.white60,
+                    color: AppTheme.colors.white,
                     fontSize: 15,
                     fontWeight: FontWeight.w500,
                   ),

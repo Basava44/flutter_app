@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/theme/AppTheme.dart';
 
 class Button extends StatelessWidget {
   @override
@@ -11,13 +12,13 @@ class Button extends StatelessWidget {
           onPressed: () {},
           style: ElevatedButton.styleFrom(
             padding: EdgeInsets.symmetric(vertical: 18,),
-            onPrimary: Colors.black,
-            primary: Colors.white,
+            onPrimary: AppTheme.colors.black,
+            primary: AppTheme.colors.white,
             textStyle: TextStyle(
               fontSize: 14,
               fontWeight: FontWeight.w600,
             ),
-            side: BorderSide(color: Colors.black, width: 1),
+            side: BorderSide(color: AppTheme.colors.black, width: 1),
             elevation: 0,
           ),
       ));

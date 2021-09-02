@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/theme/AppTheme.dart';
 
 class GlobalRewards extends StatelessWidget {
   @override
@@ -12,8 +13,8 @@ class GlobalRewards extends StatelessWidget {
             shaderCallback: (bounds) => 
             LinearGradient(
               colors: [
-                Color(0xff3023ae),
-                Color(0xffc86dd7),
+                AppTheme.colors.sapphire,
+                AppTheme.colors.lavender_pink,
               ],
               tileMode: TileMode.clamp,
             ).createShader(bounds),
@@ -22,7 +23,7 @@ class GlobalRewards extends StatelessWidget {
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
-                color: Colors.white,
+                color: AppTheme.colors.white,
               ),
               ),
           ),
@@ -33,8 +34,8 @@ class GlobalRewards extends StatelessWidget {
                 decoration: BoxDecoration(
                   gradient: LinearGradient(
                     colors:[
-                      Color(0xfff9ae34),
-                      Color(0xffff8720),
+                      AppTheme.colors.mango,
+                      AppTheme.colors.tangerine,
                     ],
                     tileMode: TileMode.clamp,
                   ),
@@ -52,7 +53,7 @@ class GlobalRewards extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 11,
                             fontWeight: FontWeight.w600,
-                            color: Colors.white,
+                            color: AppTheme.colors.white,
                           ),
                           ),
                           SizedBox(height: 6,),
@@ -63,7 +64,7 @@ class GlobalRewards extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
-                              color: Colors.white,
+                              color: AppTheme.colors.white,
                             ),
                             ),
                         ),

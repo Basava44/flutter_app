@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:badges/badges.dart';
+import 'package:flutter_app/theme/AppTheme.dart';
 import 'package:flutter_app/widgets/Brands.dart';
 import 'package:flutter_app/widgets/ElevatedButton.dart';
 import 'package:flutter_app/widgets/GlobalRewards.dart';
@@ -27,15 +28,15 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: AppTheme.colors.white,
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: Colors.white,
+          backgroundColor: AppTheme.colors.white,
           leading: IconButton(
             icon: Icon(Icons.menu_open_outlined),
             iconSize: 35,
             onPressed: () {},
-            color: Colors.black,
+            color: AppTheme.colors.black,
           ),
           actions: <Widget>[
             Badge(
@@ -50,7 +51,7 @@ class _MyAppState extends State<MyApp> {
                 },
                 icon: Icon(Icons.notifications_none_outlined),
                 iconSize: 35,
-                color: Colors.black,
+                color: AppTheme.colors.black,
               ),
             ),
             SizedBox(width: 10),
@@ -66,15 +67,14 @@ class _MyAppState extends State<MyApp> {
         body: SafeArea(
           child: ListView(
             children: <Widget>[
-              UserData(),
-              Balance(),
-              SpecialPromos(),
-              LatestPromos(),
-              RoamingPlans(),
-              GlobalRewards(),
-              Brands(),
-              Button(),
-              
+               UserData(),
+               //Balance(),
+               SpecialPromos(),
+               LatestPromos(),
+               RoamingPlans(),
+               GlobalRewards(),
+               Brands(),
+               Button(),              
             ],
           ),
         ),
