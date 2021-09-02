@@ -12,11 +12,10 @@ class RoamingPlans extends StatelessWidget {
             shaderCallback: (bounds) => 
             LinearGradient(
               colors: [
-                Color(0xff3023ae),
-                Color(0xffc86dd7),
-                Colors.red,
+                Color(0xFF3023AE),
+                Color(0xFFC86DD7),
               ],
-              tileMode: TileMode.mirror,
+              tileMode: TileMode.clamp,
             ).createShader(bounds),
             child: Text(
               'Roaming Plans',
@@ -58,7 +57,7 @@ class RoamingPlans extends StatelessWidget {
                       Color(0xffc8b9ff),
                       Color(0xffffffff),
                     ],
-                    tileMode: TileMode.repeated,
+                    tileMode: TileMode.clamp,
                   ).createShader(bounds),
                   child: Text(
                     'Planing for a foreign trip?',

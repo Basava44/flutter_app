@@ -20,12 +20,22 @@ class LatestPromos extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                'Latest Promos',
-                style: TextStyle(
-                  color: Colors.purple,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w600,
+              ShaderMask(
+                shaderCallback: (bounds) => 
+                LinearGradient(
+                  colors: [
+                    Color(0xFF3023AE),
+                    Color(0xFFC86DD7),
+                  ],
+                  tileMode: TileMode.clamp,
+                ).createShader(bounds),
+                child: Text(
+                  'Latest Promos',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
               TextButton(

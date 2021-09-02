@@ -15,7 +15,7 @@ class GlobalRewards extends StatelessWidget {
                 Color(0xff3023ae),
                 Color(0xffc86dd7),
               ],
-              tileMode: TileMode.mirror,
+              tileMode: TileMode.clamp,
             ).createShader(bounds),
             child: Text(
               'Global Rewards',
@@ -35,7 +35,8 @@ class GlobalRewards extends StatelessWidget {
                     colors:[
                       Color(0xfff9ae34),
                       Color(0xffff8720),
-                    ]
+                    ],
+                    tileMode: TileMode.clamp,
                   ),
                   borderRadius: BorderRadius.all(Radius.circular(10)),
                 ),

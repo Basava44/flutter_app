@@ -8,14 +8,24 @@ class SpecialPromos extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          Text(
-            'Special Promos',
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-              color: Colors.purple,
-            ),
-            ),
+          ShaderMask(
+            shaderCallback: (bounds) => 
+            LinearGradient(
+              colors: [
+                Color(0xFF3023AE),
+                Color(0xFFC86DD7),
+              ],
+              tileMode: TileMode.clamp,
+            ).createShader(bounds),
+            child: Text(
+              'Special Promos',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+              ),
+          ),
             SizedBox(height: 12,),
           Card(
             elevation: 0,
@@ -40,14 +50,24 @@ class SpecialPromos extends StatelessWidget {
                   ),
                   ),
                   SizedBox(height: 12,),
-                Text(
-                  'Create What Matters',
-                  style: TextStyle(
-                    color: Colors.pink.shade100,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  ),
+                ShaderMask(
+                  shaderCallback: (bounds) => 
+                  LinearGradient(
+                    colors: [
+                      Color(0xFFFFFFFF),
+                      Color(0xFFFFB2C6),
+                    ],
+                    tileMode: TileMode.clamp,
+                  ).createShader(bounds),
+                  child: Text(
+                    'Create What Matters',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    ),
+                ),
                   SizedBox(height: 4,),
                 Text(
                   'Promo that’s all you! ',
@@ -59,10 +79,10 @@ class SpecialPromos extends StatelessWidget {
                   SizedBox(height: 20,),
                 Container(
                   padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
-                  // decoration: BoxDecoration(
-                  //   color: Colors.black45,
-                  //   borderRadius: BorderRadius.circular(10),
-                  // ),
+                  decoration: BoxDecoration(
+                    color: Colors.black45,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                   child: Row(
                   children: [
                     Text(
