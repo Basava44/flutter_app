@@ -22,6 +22,5 @@ class AppColors {
   final red_brown_two = const Color(0xFF941D1D);
   final black = const Color(0xFF000000);
 
-
   const AppColors();
 }

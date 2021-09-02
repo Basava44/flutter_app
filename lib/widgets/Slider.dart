@@ -6,14 +6,14 @@ class SliderCards extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        card1(),
-        card2()
+        Card1(),
+        Card2()
       ],
     );
   }
 }
 
-class card2 extends StatelessWidget {
+class Card2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -74,7 +74,7 @@ class card2 extends StatelessWidget {
   }
 }
 
-class card1 extends StatelessWidget {
+class Card1 extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {

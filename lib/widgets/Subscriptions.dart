@@ -72,9 +72,9 @@ class Subscriptions extends StatelessWidget {
             SizedBox(
               height: 15,
             ),
-            NetflixTitle(),
+            netFlixTitle(),
             MovieCards(),
-            PrimeTitle(),
+            primeTitle(),
             MovieCards(),
             Text(
               'You might also like',
@@ -92,10 +92,7 @@ class Subscriptions extends StatelessWidget {
 }
 
 class MovieCards extends StatelessWidget {
-  const MovieCards({
-    Key? key,
-  }) : super(key: key);
-
+  
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -114,7 +111,7 @@ class MovieCards extends StatelessWidget {
   }
 }
 
-Widget NetflixTitle() {
+Widget netFlixTitle() {
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [
@@ -152,7 +149,7 @@ Widget NetflixTitle() {
   );
 }
 
-Widget PrimeTitle() {
+Widget primeTitle() {
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [

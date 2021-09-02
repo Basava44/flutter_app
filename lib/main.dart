@@ -25,6 +25,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int badgeCount = 0;
+  int currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -34,7 +35,7 @@ class _MyAppState extends State<MyApp> {
           elevation: 0,
           backgroundColor: AppTheme.colors.white,
           leading: IconButton(
-            icon: Icon(Icons.menu_open_outlined),
+            icon: Image.asset('assets/images/menu-icon.png'),
             iconSize: 35,
             onPressed: () {},
             color: AppTheme.colors.black,
@@ -51,7 +52,7 @@ class _MyAppState extends State<MyApp> {
                   });
                 },
                 icon: Icon(Icons.notifications_none_outlined),
-                iconSize: 35,
+                iconSize: 30,
                 color: AppTheme.colors.black,
               ),
             ),
@@ -68,19 +69,46 @@ class _MyAppState extends State<MyApp> {
         body: SafeArea(
           child: ListView(
             children: <Widget>[
-               UserData(),
-               Balance(),
-               SpecialPromos(),
-               LatestPromos(),
-               RoamingPlans(),
-               GlobalRewards(),
-               Brands(),
-               Button(), 
-               SizedBox(height: 20,),
-               Subscriptions()         
+              UserData(),
+              Balance(),
+              SpecialPromos(),
+              LatestPromos(),
+              RoamingPlans(),
+              GlobalRewards(),
+              Brands(),
+              Button(),
+              SizedBox(
+                height: 20,
+              ),
+              Subscriptions()
             ],
           ),
         ),
+        bottomNavigationBar: BottomNavigationBar(
+            elevation: 5,
+            currentIndex: currentIndex,
+            onTap: (index) => setState(() => currentIndex = index),
+            selectedItemColor: AppTheme.colors.warm_blue_two,
+            unselectedItemColor: AppTheme.colors.black,
+            iconSize: 28,
+            items: [
+              BottomNavigationBarItem(
+                  icon:Icon(Icons.home),
+                  label: 'Home',
+                  ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.style),
+                label: 'LifeStyle',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.wallet_travel),
+                label: 'Wallet',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.more),
+                label: 'More',
+              ),
+            ]),
       ),
     );
   }

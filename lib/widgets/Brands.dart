@@ -25,7 +25,19 @@ class Brands extends StatelessWidget {
             ),
           Row(
             children: data.map((e) => BrandCard(data: e)).toList(),
-          )
+          ),
+          // ListView.builder(
+          //   itemCount: data.length,
+          //   itemBuilder: (context, index) {
+          //     return BrandCard(
+          //       headerimage: data[index].headerimage, 
+          //       title: data[index].title,
+          //       footer1: data[index].footer1,
+          //       footer2: data[index].footer2,
+          //       image: data[index].image
+          //     );
+          //   },
+          // )
         ],
       ),
     );
