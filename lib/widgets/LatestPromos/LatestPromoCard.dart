@@ -48,6 +48,7 @@ class LatestPromoCard extends StatelessWidget {
                   style: TextStyle(
                     color: AppTheme.colors.white,
                     fontSize: 14,
+                    fontWeight: FontWeight.w500,
                   ),
                 ),
                 SizedBox(
@@ -58,6 +59,7 @@ class LatestPromoCard extends StatelessWidget {
                   style: TextStyle(
                     color: AppTheme.colors.white,
                     fontSize: 14,
+                    fontWeight: FontWeight.bold
                   ),
                 ),
               ],

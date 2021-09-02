@@ -27,10 +27,12 @@ class RoamingPlans extends StatelessWidget {
               ),
               ),
           ),
-            SizedBox(height: 12,),
+            SizedBox(height: 2,),
           Card(
             elevation: 0,
             child: Container(
+              width: 320,
+              height: 175,
               padding: EdgeInsets.all(20),
               decoration: BoxDecoration(
                 image: DecorationImage(
@@ -77,14 +79,15 @@ class RoamingPlans extends StatelessWidget {
                     fontSize: 12,
                   ),
                   ),
-                  SizedBox(height: 20,),
+                  SizedBox(height: 30,),
                 Container(
-                  padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                  //padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
                   // decoration: BoxDecoration(
                   //   color: Colors.black45,
                   //   borderRadius: BorderRadius.circular(10),
                   // ),
                   child: Row(
+                    //crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     Text(
                         'Explore Roaming Packs',
