@@ -7,8 +7,9 @@ import 'package:flutter_app/widgets/GlobalRewards.dart';
 import 'package:flutter_app/widgets/LatestPromos.dart';
 import 'package:flutter_app/widgets/RoamingPalns.dart';
 import 'package:flutter_app/widgets/SpecialPromos.dart';
-import 'widgets/UserData.dart';
-import 'widgets/Balance.dart';
+import 'package:flutter_app/widgets/Subscriptions.dart';
+import 'package:flutter_app/widgets/UserData.dart';
+import 'package:flutter_app/widgets/Balance.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -74,7 +75,9 @@ class _MyAppState extends State<MyApp> {
                RoamingPlans(),
                GlobalRewards(),
                Brands(),
-               Button(),              
+               Button(), 
+               SizedBox(height: 20,),
+               Subscriptions()         
             ],
           ),
         ),
