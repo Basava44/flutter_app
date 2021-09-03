@@ -48,7 +48,7 @@ class _MyAppState extends State<MyApp> {
               child: IconButton(
                 onPressed: () {
                   setState(() {
-                    badgeCount += 2;
+                    badgeCount += 1;
                   });
                 },
                 icon: Icon(Icons.notifications_none_outlined),
