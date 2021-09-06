@@ -37,7 +37,7 @@ class _MyAppState extends State<MyApp> {
           leading: IconButton(
             icon: Image.asset('assets/images/menu-icon.png'),
             iconSize: 35,
-            onPressed: () {},
+            onPressed: () => {},
             color: AppTheme.colors.black,
           ),
           actions: <Widget>[
@@ -84,31 +84,100 @@ class _MyAppState extends State<MyApp> {
             ],
           ),
         ),
-        bottomNavigationBar: BottomNavigationBar(
-            elevation: 5,
-            currentIndex: currentIndex,
-            onTap: (index) => setState(() => currentIndex = index),
-            selectedItemColor: AppTheme.colors.warm_blue_two,
-            unselectedItemColor: AppTheme.colors.black,
-            iconSize: 28,
-            items: [
-              BottomNavigationBarItem(
-                  icon:Icon(Icons.home),
-                  label: 'Home',
+        bottomNavigationBar: SafeArea(
+          child: BottomNavigationBar(
+              currentIndex: currentIndex,
+              onTap: (index) => setState(() => currentIndex = index),
+              selectedItemColor: AppTheme.colors.warm_blue_two,
+              unselectedItemColor: AppTheme.colors.black,
+              iconSize: 28,
+              items: [
+                BottomNavigationBarItem(
+                    icon:Icon(Icons.home),
+                    label: 'Home',
+                    ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.style),
+                  label: 'LifeStyle',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.wallet_travel),
+                  label: 'Wallet',
+                ),
+                BottomNavigationBarItem(
+                  icon: Icon(Icons.more),
+                  label: 'More',
+                ),
+              ]),
+        ),
+        drawer: Drawer(
+          child: ListView(
+            padding: EdgeInsets.zero,
+            children: [
+              DrawerHeader(
+                decoration: BoxDecoration(
+                  color: AppTheme.colors.purpleish_blue,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: AssetImage('assets/images/avatar.png'),
+                      radius: 32,
+                    ),
+                    SizedBox(height: 10),
+                    Opacity(
+                      opacity: 0.64,
+                      child: Text(
+                        'My Prepaid',
+                        style: TextStyle(
+                          color: AppTheme.colors.white,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 6,),
+                    Text(
+                      '092787368820',
+                      style: TextStyle(
+                        color: AppTheme.colors.white,
+                        fontSize:16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              ListTile(
+                title: Text(
+                  'About Globe',
+                  style: TextStyle(
+                    color: AppTheme.colors.black,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
                   ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.style),
-                label: 'LifeStyle',
+                ),
+                onTap: (){
+                  Navigator.pop(context);
+                }
               ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.wallet_travel),
-                label: 'Wallet',
+              ListTile(
+                title: Text(
+                  'Payment',
+                  style: TextStyle(
+                    color: AppTheme.colors.black,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                onTap: (){
+                  Navigator.pop(context);
+                }
               ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.more),
-                label: 'More',
-              ),
-            ]),
+            ],
+          ),
+        ),
       ),
     );
   }

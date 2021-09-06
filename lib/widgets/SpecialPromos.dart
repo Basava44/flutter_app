@@ -78,28 +78,27 @@ class SpecialPromos extends StatelessWidget {
                   ),
                   ),
                   SizedBox(height: 20,),
-                Container(
-                  padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
-                  // decoration: BoxDecoration(
-                  //   color: Colors.black45,
-                  //   borderRadius: BorderRadius.circular(10),
-                  // ),
-                  child: Row(
-                  children: [
-                    Text(
-                        'Create your own Promo',
-                        style: TextStyle(
-                        color: AppTheme.colors.white,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
+                TextButton(
+                  onPressed: (){},
+                  child: Container(
+                    padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
+                    child: Row(
+                    children: [
+                      Text(
+                          'Create your own Promo',
+                          style: TextStyle(
+                          color: AppTheme.colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          ),
                         ),
+                      Icon(
+                          Icons.arrow_right_outlined,
+                          color: AppTheme.colors.white,
                       ),
-                    Icon(
-                        Icons.arrow_right_outlined,
-                        color: AppTheme.colors.white,
-                    ),
-                  ],
-                ),
+                    ],
+                  ),
+                  ),
                 )
               ],),
             ),

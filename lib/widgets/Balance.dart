@@ -28,23 +28,22 @@ class Balance extends StatelessWidget {
          children:data.map((e) => BalanceCard(data: e)).toList(),
        ),
        Recomended(),
-       //NetflixSlides(),
        ],
      ),
     );
   }
 }
 
-Widget NetflixSlides() {
-  return Expanded(
-      child: ListView.builder(
-    shrinkWrap: true,
-    scrollDirection: Axis.horizontal,
-    itemCount: 15,
-    itemBuilder: (BuildContext context, int index) => Card(
-      child:Center(
-        child: Text('Basava the Don'),
-      ),
-    ),
-  ));
-}
+// Widget NetflixSlides() {
+//   return Expanded(
+//       child: ListView.builder(
+//     shrinkWrap: true,
+//     scrollDirection: Axis.horizontal,
+//     itemCount: 15,
+//     itemBuilder: (BuildContext context, int index) => Card(
+//       child:Center(
+//         child: Text('Basava the Don'),
+//       ),
+//     ),
+//   ));
+// }

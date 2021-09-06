@@ -21,6 +21,7 @@ class AppColors {
   final red_brown = const Color(0xFF771313);
   final red_brown_two = const Color(0xFF941D1D);
   final black = const Color(0xFF000000);
+  final purpleish_blue = const Color(0xFF3E44F4);
 
   const AppColors();
 }
