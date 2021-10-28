@@ -5,7 +5,7 @@ class Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(25, 0, 25, 10),
+      padding: EdgeInsets.fromLTRB(25, 10, 25, 10),
         child: ElevatedButton(
 
           child: Text('Find Out More'),

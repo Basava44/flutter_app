@@ -80,7 +80,7 @@ class _MyAppState extends State<MyApp> {
               SizedBox(
                 height: 20,
               ),
-              Subscriptions()
+              Subscriptions(),
             ],
           ),
         ),
@@ -93,9 +93,9 @@ class _MyAppState extends State<MyApp> {
               iconSize: 28,
               items: [
                 BottomNavigationBarItem(
-                    icon:Icon(Icons.home),
-                    label: 'Home',
-                    ),
+                  icon: Icon(Icons.home),
+                  label: 'Home',
+                ),
                 BottomNavigationBarItem(
                   icon: Icon(Icons.style),
                   label: 'LifeStyle',
@@ -137,12 +137,14 @@ class _MyAppState extends State<MyApp> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 6,),
+                    SizedBox(
+                      height: 6,
+                    ),
                     Text(
                       '092787368820',
                       style: TextStyle(
                         color: AppTheme.colors.white,
-                        fontSize:16,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     )
@@ -150,35 +152,46 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
               ListTile(
-                title: Text(
-                  'About Globe',
-                  style: TextStyle(
-                    color: AppTheme.colors.black,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
+                  title: Text(
+                    'About Globe',
+                    style: TextStyle(
+                      color: AppTheme.colors.black,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
-                ),
-                onTap: (){
-                  Navigator.pop(context);
-                }
-              ),
+                  onTap: () {
+                    Navigator.pop(context);
+                  }),
               ListTile(
-                title: Text(
-                  'Payment',
-                  style: TextStyle(
-                    color: AppTheme.colors.black,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w500,
+                  title: Text(
+                    'Payment',
+                    style: TextStyle(
+                      color: AppTheme.colors.black,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
-                ),
-                onTap: (){
-                  Navigator.pop(context);
-                }
-              ),
+                  onTap: () {
+                    Navigator.pop(context);
+                  }),
             ],
           ),
         ),
       ),
     );
   }
+}
+
+Widget _common() {
+  return (Expanded(
+    child: ListView.builder(
+      shrinkWrap: true,
+      scrollDirection: Axis.horizontal,
+      itemCount: 4,
+      itemBuilder: (BuildContext context, int index) => Card(
+        child: Center(child: Text('Dummy Card Text')),
+      ),
+    ),
+  ));
 }
